@@ -7,3 +7,4 @@ def obj.talk
   puts "(Do you object?)"
 end
 
+obj.talk
