@@ -1,8 +1,11 @@
+# frozen_string_literal: false
+
 namespace :admin do
-  desc "Interactively delete all files in /tmp"
+  desc 'Interactively delete all files in /tmp'
   task :clean_tmp do
-    Dir["./tmp/*"].each do |f|
-      next unless File.file? (f)
+    Dir['./tmp/*'].each do |f|
+      next unless File.file?(f)
+
       puts "Delete #{f}? "
       answer = $stdin.gets
       case answer
