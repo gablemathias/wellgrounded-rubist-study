@@ -1,11 +1,11 @@
 ticket = Object.new
 
 def ticket.date
-  "1903-01-02"
+  '1903-01-02'
 end
 
 def ticket.venue
-  "Town Hall"
+  'Town Hall'
 end
 
 def ticket.event
@@ -13,11 +13,11 @@ def ticket.event
 end
 
 def ticket.performer
-  "Mark Twain"
+  'Mark Twain'
 end
 
 def ticket.seat
-  "Second Balcony, row J, seat 12"
+  'Second Balcony, row J, seat 12'
 end
 
 def ticket.price
@@ -25,13 +25,13 @@ def ticket.price
 end
 
 def ticket.availability_status
-  "sold"
+  'sold'
 end
 
 def ticket.available?
   false
 end
 
-puts "This ticket is for: #{ticket.event}, at #{ticket.venue}, on #{ticket.date}.\n" +
-"The performer is #{ticket.performer}.\n" +
-"The seat is #{ticket.seat}, and it costs $#{"%.2f" % ticket.price}"
+puts "This ticket is for: #{ticket.event}, at #{ticket.venue}, on #{ticket.date}.\n" \
+"The performer is #{ticket.performer}.\n" \
+"The seat is #{ticket.seat}, and it costs $#{format('%.2f', ticket.price)}"
